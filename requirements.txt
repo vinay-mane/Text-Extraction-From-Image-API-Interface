@@ -5,5 +5,4 @@ numpy
 matplotlib
 gunicorn
 pytesseract
-cv2
 PIL
