@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            margin: 3vw;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-image: url(https://images.unsplash.com/photo-1579547944212-c4f4961a8dd8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGRhcmNrJTIwZ3JhZGllbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60);
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        .cover {
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            backdrop-filter: blur(5px);
+            border-radius: 15px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.299);
+            min-height: max-content;
+            padding: 4vw;
+            margin-bottom: 3vw;
+        }
+
+        .cover-head {
+            font-size: xxx-large;
+        }
+
+        .cover div {
+            padding-top: 1vh;
+            padding-bottom: 1vh;
+            margin-top: 1vh;
+        }
+
+        .bor {
+            background-color: rgba(0, 0, 0, 0.37);
+            padding-left: 4vw;
+            width: fit-content;
+            padding-right: 4vw;
+            border-radius: 40vh;
+        }
+
+        .nav {
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+            backdrop-filter: blur(5px);
+            background: linear-gradient(111.1deg, rgba(0, 40, 70, 0.164) -4.8%, rgba(255, 115, 115, 0.146) 82.7%, rgba(255, 176, 123, 0.142) 97.2%);
+            display: flex;
+            justify-content: end;
+            border-radius: 15px;
+            color: white;
+            background-color: rgba(255, 255, 255, 0.326);
+            min-height: max-content;
+            padding: 4vw;
+            margin-bottom: 3vw;
+        }
+
+        .nav div {
+            /* background-color: black; */
+            margin-left: 2vw;
+            /* height: 20px;
+            width: 20px; */
+        }
+
+        form{
+            border-style: dashed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 20vh;
+            border-radius: inherit;
+        }
+        form button{
+            display: none;
+        }
+
+        .addfile{
+            border-style: dashed;
+            height: 20vh;
+            border-radius: inherit;
+            opacity: 0;
+        }
+
+        .formtext{
+            position: absolute;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+
+    <div class="cover">
+        <div class="cover-head">Get Text Extracted From Image</div>
+        <div class="cover-data">It shouldn't take more than a second to convert an image to text. Our picture to text
+            converter is a free online OCR tool that converts images into text in no time.</div>
+        <div class="bor cover-data">tesseract is used for conversion</div>
+    </div>
+    <div class="logic">
+        <div class="nav">
+            <div class="git">Github</div>
+            <div class="link">Linkdin</div>
+        </div>
+        <div class="upload cover">
+            <form action="/" method="post" enctype="multipart/form-data">
+                <div class="formtext">Click or Drag and Drop Image</div>
+                <input type="file" name="file" class="addfile">
+                <button id="submit" type="submit">Covert</button>
+            </form>
+        </div>
+        <div class="output"></div>
+    </div>
+
+    <div class="output cover">
+
+        {{prediction_text}}
+    </div>
+
+
+    <!-- <form action="/" method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <button type="submit">Upload</button>
+    </form> -->
+</body>
+
+<script>
+    const inp = document.querySelector('input')
+    const submit = document.querySelector('#submit')
+    inp.addEventListener('change',()=>{
+        submit.click()
+    })
+
+</script>
+
+</html>
