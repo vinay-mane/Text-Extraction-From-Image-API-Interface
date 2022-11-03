@@ -1,8 +1,7 @@
-import pytesseract
-import cv2
+# import pytesseract
 
-def getText(image):
-  return(pytesseract.image_to_string(image))
+# def getText(image):
+#   return(pytesseract.image_to_string(image))
 
 # image = cv2.imread("j.png")
 # getText(image)
