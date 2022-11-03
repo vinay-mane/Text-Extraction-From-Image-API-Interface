@@ -12,14 +12,15 @@ app = Flask(__name__)
 
 @app.route('/',methods=['POST','GET'])
 def wetImage():
-    if request.method=="GET":
-        return render_template("index.html",prediction_text='')
-    file=request.files['file']
-    if file.filename=='':
-        return render_template("index.html",prediction_text='')
-    print(file.filename)
-    img = Image.open(file.stream)
-    return render_template("index.html",prediction_text=proc.getText(img))
+    # if request.method=="GET":
+    #     return render_template("index.html",prediction_text='')
+    # file=request.files['file']
+    # if file.filename=='':
+    #     return render_template("index.html",prediction_text='')
+    # print(file.filename)
+    # img = Image.open(file.stream)
+    # return render_template("index.html",prediction_text=proc.getText(img))
+    return render_template("index.html",prediction_text="aabc")
     
 
 
