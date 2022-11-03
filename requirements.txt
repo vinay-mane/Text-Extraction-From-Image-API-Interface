@@ -6,4 +6,4 @@ matplotlib
 gunicorn
 pytesseract
 cv2
-PILs
+PIL
