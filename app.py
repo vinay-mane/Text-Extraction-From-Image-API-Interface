@@ -10,7 +10,7 @@ from PIL import Image
 
 app = Flask(__name__)
 
-@app.route('/',methods=["POST","GET"])
+@app.route('/',methods=['POST','GET'])
 def wetImage():
     if request.method=="GET":
         return render_template("index.html",prediction_text='')
