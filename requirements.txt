@@ -5,6 +5,5 @@ numpy
 matplotlib
 gunicorn
 pytesseract
-pickle
 cv2
-PIL
+PILs
