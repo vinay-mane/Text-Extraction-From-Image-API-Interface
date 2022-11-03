@@ -14,7 +14,7 @@ app = Flask(__name__)
 def getText(image):
   return(pytesseract.image_to_string(image))
 
-@app.route('/',methods=['POST','GET'])
+@app.route('/',methods=['POST'])
 def wetImage():
     # if request.method=='GET':
     #     return render_template('index.html',prediction_text='')
