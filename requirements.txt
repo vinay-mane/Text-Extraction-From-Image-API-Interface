@@ -1,8 +1,5 @@
 Flask
-sklearn 
-pandas
-numpy
-matplotlib
 gunicorn
 pytesseract
-Image
+opencv-python
+Pillow
